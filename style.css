@@ -1,0 +1,519 @@
+@import url('https://fonts.googleapis.com/css2?family=Anta&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Slab:wght@100..900&display=swap');
+
+* {
+    
+    box-sizing: border-box;
+    font-family: sans-serif;
+    overflow: hidden;
+}
+
+body, html {
+    padding: 0;
+    margin: 0;
+}
+
+.grid {
+    width: 100vw;
+    height: 100vh;
+    
+    background-color: #064e3b;
+    display: grid;
+    grid-template-columns: 275px  1fr;
+    
+}
+
+.grid > div {
+    /* border: 1px solid red; */
+}
+
+
+
+.content {
+    background-color: #c3ddeb;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 280px;
+    grid-template-rows: 200px 1fr 1fr 1fr ;
+}
+
+.header {
+    
+    box-shadow: 0 1px rgba(0, 0, 0, 0.212);
+    grid-column: 1 / -1;
+    background-color: white;
+}
+
+.projects {
+    padding: 18px 4%;
+    
+    grid-column: 1 / span 3;
+    grid-row: 2 / span 3;
+    
+}
+
+h2 {
+    margin-top: 0;
+    font-size: 21px;
+}
+
+
+
+.projects-grids::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.projects-grids {
+    overflow: auto;
+    width: 100%;
+    height: 94%;
+    padding-right: 4px;
+    /* border: 1px solid red; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 202px;
+    column-gap: 20px;
+    row-gap: 15px;
+
+}
+
+.projects-grids > div::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.projects-grids > div {
+    background-color: white;
+    box-shadow: 2px 2.6px rgba(0, 0, 0, 0.068);
+    border-radius: 10px;
+    display: flex;
+    
+   
+    flex-direction: column;
+    
+    padding: 10px 20px;
+    border-left: 8px solid #f59e0b;
+}
+
+h3 {
+    margin-bottom: 0;
+}
+.projects-p {
+    margin-top: 2px;
+}
+
+
+.icons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    
+    padding-right: 5px;
+    height: 20%;
+    width: 100%;
+    gap: 18px;
+}
+
+.icons > a {
+    text-decoration: none;
+    color: black;
+}
+.sidebar {
+    background-color: rgb(41, 129, 230);
+    padding: 5% 4%;
+
+    
+}
+
+.account {
+    padding: 10px;
+   
+    display: flex;
+    
+    align-items: center;
+    gap: 14px;
+    
+    
+}
+
+#acc {
+    color: white;
+    font-size: 26px;
+    font-weight: normal;
+    margin-top: -10px;
+    margin-bottom: 25px;
+    font-family: sans-serif;
+    
+    
+    
+    letter-spacing: 1.6px;
+}
+
+#dashboard {
+    color: white;
+   align-self: center;
+    font-size: 34px;
+    width: 40px;
+    
+    
+    
+}
+
+.settings {
+    display: flex;
+    width: 100%;
+    padding: 0 6%;
+    /* border: 1px solid red; */
+    height: 35%;
+    
+    flex-direction: column;
+
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.settings > div {
+    display: flex;
+    height: 40px;
+    /* border: 1px solid red; */
+    
+    color: white;
+    letter-spacing: 1.3px;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+}
+
+.icon-h {
+    font-size: 19px;
+    margin-bottom: 2px;
+    font-weight: normal;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.icon-h:hover {
+    color: rgb(2, 0, 1);
+}
+
+.support {
+    display: flex;
+   
+    width: 100%;
+    padding: 0 6%;
+    /* border: 1px solid red; */
+    height: 50%;
+    
+    flex-direction: column;
+}
+
+
+
+.support > div {
+    display: flex;
+    height: 40px;
+    /* border: 1px solid red; */
+    margin: 0;
+    color: white;
+    letter-spacing: 1.3px;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.search, .post {
+    padding: 2% 2%;
+    width: 100%;
+    height: 50%;
+    
+}
+
+
+.search {
+    display: flex;
+}
+
+.search-bar {
+    width: 70%;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    height: 100%;
+    
+}
+
+.search-bar > input {
+    width: 85%;
+    height: 65%;
+    border: 1px solid rgb(3, 3, 46);
+    background-color: #c3ddeb;
+    outline: none;
+
+    font-size: 16px;
+    padding: 0 20px;
+    border-radius: 50px;
+}
+
+.search-bar > a {
+    color: black;
+    font-size: 28px;
+    text-decoration: none;
+}
+
+.name-pfp {
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 25px;
+    height: 100%;
+    
+}
+
+.name-pfp > .img > img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.name-pfp > a {
+    color: black;
+    font-size: 26px;
+    text-decoration: none;
+}
+
+.name-pfp > h3 {
+    align-self: flex-start;
+    letter-spacing: 1.3px;
+    font-family: sans-serif;
+}
+
+.post {
+    padding: 0.5px 2%;
+    
+    display: flex;
+}
+
+.intro-to-self {
+    padding-left: 35px;
+    width: 55%;
+    height: 100%;
+    
+    display: flex;
+    gap: 15px;
+}
+
+.intro-to-self > a > img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.hi-name {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.hi-name > h5 {
+    margin: 0;
+    font-size: 17px;
+}
+
+.hi-name > h1 {
+    margin: 0;
+    font-size: 22px;
+}
+
+
+.posting-icons {
+    width: 50%;
+    height: 100%;
+    padding-right: 15px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+.posting-icons > button {
+    width: 120px;
+    letter-spacing: 1.2px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0.5px 1.5px rgba(0, 0, 0, 0.356);
+    border: none;
+    border-radius: 45px;
+    color: white;
+    background-color: #0390db;
+    transition: background-color 0.3s ease;
+    height: 38px;
+}
+
+.posting-icons > button:hover {
+    background-color: #0470aa;
+}
+
+.announcements {
+    padding: 18px 4%;
+    /* border: 1px solid red; */
+    grid-row: 2 / span 3;
+}
+
+.statements {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.822);
+    box-shadow: 0.5px 1.5px rgba(0, 0, 0, 0.356);
+    height: 55%;
+    border-radius: 5px;
+    padding: 0 17px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    /* border: 1px solid red; */
+}
+
+.statements > div {
+    /* border: 1px solid red; */
+    padding: 18px 10px;
+}
+
+.statements > div > h3 , .statements > div > p {
+    margin: 0;
+}
+
+.statements > div > h3 {
+    margin-bottom: 2px;
+    font-size: 18px;
+}
+
+.statements > div > p {
+    font-size: 15px;
+}
+
+.first {
+    
+    border-bottom: 1px solid grey;
+}
+
+.trending::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.trending {
+    
+    width: 100%;
+    padding: 15px 15px;
+    overflow: auto;
+    height: 35%;
+    background-color: rgba(255, 255, 255, 0.849);
+}
+
+#trending-text {
+    margin-bottom: 10px;
+    margin-top: 15px;
+}
+
+.trending-board {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.trending-person {
+    display: flex;
+    gap: 12px;
+}
+
+.trending-person > img {
+    width: 60px;
+    object-fit: cover;
+    height: 60px;
+    border-radius: 50%;
+
+}
+
+.trending-person-data {
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 8px;
+
+}
+
+.person-title , .person-username {
+    align-self: flex-start;
+    margin: 0;
+}
+
+.person-username {
+    font-size: 15.5px;
+    letter-spacing: 1.1px;
+}
+
+.person-title {
+    color: grey;
+}
+
+@media only screen and (min-width: 895px) and (max-width: 1030px) {
+    .projects-grids {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media only screen and (min-width: 555px) and (max-width: 894px){
+
+
+
+    .projects {
+        width: 195%;
+        padding: 15px 25px;
+    }
+
+    
+
+    .projects-grids {
+        grid-template-columns: 550px;
+        overflow-x: auto;
+        grid-auto-columns:  550px;
+        grid-template-rows: 202px;
+        border-right: none;
+        grid-column: 1 / -1;
+        grid-row-start: 2;
+        grid-auto-flow: column;
+    }
+
+    .announcements {
+        
+        overflow: auto;
+        min-height: 100%;
+        margin-top: 35px;
+        grid-row: 3 / -1;
+        grid-column: 1 / -1;
+    }
+
+    .statements {
+        height: 300px;
+    }
+
+    .trending {
+        height: 200px;
+    }
+
+    #trending-text {
+        padding-top: 25px;
+    }
+
+    
+}
